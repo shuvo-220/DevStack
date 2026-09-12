@@ -2,6 +2,7 @@ import { useState } from 'react'
 import StackCard from './StackCard'
 import data from './data.json'
 import MyStack from './MyStack'
+import { toast } from 'react-toastify'
 
 
 const Explore = () => {
@@ -11,6 +12,7 @@ const Explore = () => {
 
   const handleAddToStack=(tech)=>{
     setStack(prev=>[...prev, tech])
+    toast.success(`${tech.name} added to your stack!`);
   }
 
   const handleRemove=(id)=>{

@@ -47,7 +47,7 @@ const MyStack = ({ stack, onRemove, onRemoveAll }) => {
                         return <div className="mt-5 ">
                             <div className="flex justify-between items-center border border-gray-300 rounded-lg p-2 min-w-[250px]">
                                 <div className="flex items-center justify-between gap-2">
-                                    <span>{data.icon} </span>
+                                    <span className='w-10 h-10 flex items-center justify-center text-4xl'>{data.icon} </span>
                                     <div className='flex flex-col'>
                                         <span className="text-sm font-medium">{data.name}</span>
                                         <span className='text-[10px] text-gray-400'>{data.category}</span>
@@ -69,7 +69,7 @@ const MyStack = ({ stack, onRemove, onRemoveAll }) => {
                 <div>
                     <button
                         onClick={onRemoveAll}
-                        className='mt-3 bg-red-500 hover:bg-red-600 text-white py-1 w-full rounded-md cursor-pointer'
+                        className='mt-3 border border-red-500 hover:bg-red-600 text-red-500 hover:text-white py-1 w-full rounded-md cursor-pointer'
                     >
                         Remove All
                     </button>
