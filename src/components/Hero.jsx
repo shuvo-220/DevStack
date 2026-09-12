@@ -2,7 +2,7 @@ import image from '../assets/banner-stack.png'
 
 const Hero = () => {
   return (
-    <div className="mx-10 py-10 flex items-center justify-between">
+    <div className="mx-5 mt-[150px] md:mt-0 sm:mx-8 md:mx-10 py-10 flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
         {/* text part */}
         <div>
             <h1 className='text-6xl font-bold'>Build Your Ideal</h1>

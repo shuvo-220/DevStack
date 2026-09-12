@@ -3,7 +3,7 @@ import logo from '../assets/logo-text.png'
 const Footer = () => {
     return (
         <div className='py-5 border-t border-gray-300'>
-            <div className='mx-10 py-5 flex justify-between'>
+            <div className="mx-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
                 <div>
                     <img src={logo} alt='footer logo' />
                     <div className='py-5 max-w-md'>
