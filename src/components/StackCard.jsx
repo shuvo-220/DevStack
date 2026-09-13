@@ -1,21 +1,29 @@
 import React from 'react'
 import { FaStar } from "react-icons/fa6";
+import { FaReact, FaVuejs, FaNodeJs, FaJs, FaJava, FaDocker } from "react-icons/fa";
+import { SiSvelte, SiNextdotjs, SiPostgresql, SiRedis, SiTypescript, SiTailwindcss }
+    from "react-icons/si";
 
 const StackCard = ({ techStack, stack, onAddStack }) => {
+
+    const icons = { FaReact, FaVuejs, SiSvelte, SiNextdotjs, FaNodeJs, SiPostgresql, SiRedis, FaJs, SiTypescript, FaJava, SiTailwindcss, FaDocker };
 
     return (
         <div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8 max-w-4xl">
                 {techStack.map(tech => {
-                    const isAdded = stack.some(item=>item.id === tech.id);
+                    const isAdded = stack.some(item => item.id === tech.id);
                     return <div className='border border-gray-300 p-3 rounded-sm' >
                         <div className="flex items-center justify-between">
-                            {/* Icon */}
+                            
                             <div className="w-14 h-14 flex items-center justify-center text-4xl">
-                                {tech.icon}
+                                {(() => {
+                                    const Icon = icons[tech.icon];
+                                    return <Icon />;
+                                })()}
                             </div>
 
-                            {/* Badge */}
+                            
                             <span className="text-gray-500 bg-gray-100 py-0.5 px-2 rounded-full">
                                 {tech.badge}
                             </span>

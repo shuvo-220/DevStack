@@ -1,29 +1,14 @@
 import React from 'react'
+import { FaReact, FaVuejs, FaNodeJs, FaJs, FaJava, FaDocker } from "react-icons/fa";
+import { SiSvelte, SiNextdotjs, SiPostgresql, SiRedis, SiTypescript, SiTailwindcss }
+    from "react-icons/si";
 
-const dummy = [
-    {
-        "id": 1,
-        "name": "React",
-        "description": "A declarative component-based JavaScript library for building user interfaces.",
-        "category": "Frontend",
-        "level": "Intermediate",
-        "rating": 4.9,
-        "badge": "Popular",
-        "icon": "⚛️"
-    },
-    {
-        "id": 2,
-        "name": "Vue.js",
-        "description": "A progressive JavaScript framework for building user interfaces.",
-        "category": "Frontend",
-        "level": "Intermediate",
-        "rating": 4.8,
-        "badge": "Versatile",
-        "icon": "🟢"
-    },
-]
 
 const MyStack = ({ stack, onRemove, onRemoveAll }) => {
+
+ const icons = { FaReact, FaVuejs, SiSvelte, SiNextdotjs, FaNodeJs, SiPostgresql, SiRedis, FaJs, SiTypescript, FaJava, SiTailwindcss, FaDocker };
+    
+
     return (
         <div className="border border-gray-200 rounded-xl p-5 h-fit">
 
@@ -44,10 +29,11 @@ const MyStack = ({ stack, onRemove, onRemoveAll }) => {
                 ) : (
 
                     stack.map(data => {
+                        const Icon = icons[data.icon];
                         return <div className="mt-5 ">
                             <div className="flex justify-between items-center border border-gray-300 rounded-lg p-2 min-w-[250px]">
                                 <div className="flex items-center justify-between gap-2">
-                                    <span className='w-10 h-10 flex items-center justify-center text-4xl'>{data.icon} </span>
+                                    <span className='w-10 h-10 flex items-center justify-center text-4xl'>{<Icon />} </span>
                                     <div className='flex flex-col'>
                                         <span className="text-sm font-medium">{data.name}</span>
                                         <span className='text-[10px] text-gray-400'>{data.category}</span>
