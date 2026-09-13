@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { FaReact, FaVuejs, FaNodeJs, FaJs, FaJava, FaDocker } from "react-icons/fa";
 import { SiSvelte, SiNextdotjs, SiPostgresql, SiRedis, SiTypescript, SiTailwindcss }
     from "react-icons/si";
@@ -23,9 +23,14 @@ const MyStack = ({ stack, onRemove, onRemoveAll }) => {
 
             {
                 stack.length === 0 ? (
+                   <>
                     <p className="text-sm text-gray-400 text-center mt-5">
                         No technology added yet.
                     </p>
+
+                    <div className='py-4 px-8 border border-gray-300 border-dotted text-gray-500 rounded-md mt-3'>You Stack Is Empty</div>
+                   </>
+                    
                 ) : (
 
                     stack.map(data => {

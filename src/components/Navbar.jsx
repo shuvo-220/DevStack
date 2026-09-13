@@ -9,6 +9,11 @@ const Navbar = () => {
                 <div className='flex items-center'>
                     <img className='sm:block md:hidden' src={ham}  alt='mobile menu' />
                     <img className='hidden md:block' src={logo} alt='logo' />
+                    <img
+                    className="absolute left-1/2 -translate-x-1/2 w-28 sm:w-32 md:hidden"
+                    src={logo}
+                    alt="logo"
+                />
                 </div>
 
                 <div>

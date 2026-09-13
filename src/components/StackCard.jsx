@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { FaStar } from "react-icons/fa6";
 import { FaReact, FaVuejs, FaNodeJs, FaJs, FaJava, FaDocker } from "react-icons/fa";
 import { SiSvelte, SiNextdotjs, SiPostgresql, SiRedis, SiTypescript, SiTailwindcss }

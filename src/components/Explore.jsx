@@ -30,7 +30,7 @@ const Explore = () => {
             <p className='py-3 text-gray-500'>Pick one technology per category to build your ideal stack.</p>
         </div>
 
-        <div className='flex justify-between gap-4'>
+        <div className='flex flex-col lg:flex-row justify-between gap-6'>
           <StackCard 
           techStack={techStack} 
           stack={stack} 
